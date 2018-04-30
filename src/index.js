@@ -3,7 +3,7 @@ var MongoClient = require('mongodb').MongoClient;
 
 var uri = "mongodb+srv://isi-read-only-user:OYKrQGLp5582EtSu@cluster0-fjo6d.mongodb.net/test";
 
-const bd_output;
+var bd_output;
 
 MongoClient.connect(uri, function(err, client) {
    const collection = client.db("test").collection("devices");
