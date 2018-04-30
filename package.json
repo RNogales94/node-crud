@@ -13,7 +13,10 @@
   },
   "dependencies" :
   {
-    "mongodb" : ">=3.0.7"
+    "mongoose" : ">=3.0.7",
+    "express": "^4.7.1",
+    "method-override": "^2.1.2",
+    "body-parser": "^1.5.1"
   },
   "keywords": [
     "node",
