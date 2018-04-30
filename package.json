@@ -11,6 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/RNogales94/node-crud.git"
   },
+  "dependencies" :
+  {
+    "mongodb" : ">=3.0.7"
+  },
   "keywords": [
     "node",
     "heroku",
