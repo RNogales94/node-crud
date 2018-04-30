@@ -2,7 +2,9 @@ var express  = require("express"),
     app      = express(),
     http     = require("http"),
     server   = http.createServer(app),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    methodOverride = require('method-override'),
+    bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -16,7 +18,7 @@ router.get('/', function(req, res) {
 
 app.use(router);
 
-mongoose.connect('mongodb://localhost/tvshows', function(err, res) {
+mongoose.connect('mongodb+srv://isi-read-only-user:OYKrQGLp5582EtSu@cluster0-fjo6d.mongodb.net/test', function(err, res) {
   if(err) {
     console.log('ERROR: connecting to Database. ' + err);
   }

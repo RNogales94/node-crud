@@ -22,7 +22,7 @@ http.createServer(function (request, response) {
    // Content Type: text/plain
    response.writeHead(200, {'Content-Type': 'JSON/plain'});
    // Send the response body as "Hello World"
-   response.end(JSON.parse(bd_output));
+   response.end("OK");
 }).listen(port);
 
 // Console will print the message
