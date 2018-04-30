@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 
+var port = process.env.PORT || 3000;
 var router = express.Router();
 
 router.get('/', function(req, res) {
@@ -22,7 +23,7 @@ mongoose.connect('mongodb+srv://isi-read-only-user:OYKrQGLp5582EtSu@cluster0-fjo
   if(err) {
     console.log('ERROR: connecting to Database. ' + err);
   }
-  app.listen(3000, function() {
-    console.log("Node server running on http://localhost:3000");
+  app.listen(port, function() {
+    console.log("Node server running");
   });
 });
