@@ -16,13 +16,16 @@ var port = process.env.PORT || 3000;
 var router = express.Router();
 
 router.get('/', function(req, res) {
-   res.send("Ahoj světe!");
+   res.send("Funciona !");
 });
 
 router.get('/katka', function(req, res) {
    res.send("Ahoj Katka!");
 });
 
+router.get('/mila', function(req, res) {
+   res.send("Hola doña Milagros");
+});
 app.use(router);
 
 mongoose.connect(uri_mongo, function(err, res) {
