@@ -1,3 +1,10 @@
+/*
+Node Server file.
+
+This is the main file.
+
+*/
+
 var express  = require("express"),
     app      = express(),
     http     = require("http"),
@@ -11,12 +18,14 @@ const uri_mongo = 'mongodb+srv://isi-read-only-user:OYKrQGLp5582EtSu@cluster0-fj
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
+app.set('view engine', 'ejs');
+
 
 var port = process.env.PORT || 3000;
 var router = express.Router();
 
 router.get('/', function(req, res) {
-   res.send("Funciona !");
+   res.render('index');
 });
 
 router.get('/katka', function(req, res) {
